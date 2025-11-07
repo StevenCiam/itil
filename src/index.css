@@ -1,0 +1,302 @@
+/* --- Global Reset & Fonts (dari Web Arcomix) --- */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    line-height: 1.7;
+    background-color: #f4f7f6;
+    color: #333;
+    display: flex; /* Untuk sticky footer */
+    flex-direction: column; /* Untuk sticky footer */
+    min-height: 100vh; /* Untuk sticky footer */
+}
+
+#root {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    width: 100%;
+}
+
+.container {
+    width: 90%;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+/* --- Header & Navigasi (dari Web Arcomix) --- */
+header {
+    background-color: #ffffff;
+    padding: 15px 0;
+    border-bottom: 1px solid #ddd;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+header nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #004a99; /* Biru ITIL */
+}
+
+header ul {
+    list-style: none;
+    display: flex;
+}
+
+header ul li {
+    margin-left: 25px;
+}
+
+header ul li a {
+    text-decoration: none;
+    color: #555;
+    font-weight: 600;
+    padding: 5px 0;
+    border-bottom: 3px solid transparent;
+    transition: color 0.3s ease, border-color 0.3s ease;
+}
+
+header ul li a:hover {
+    color: #004a99;
+}
+
+/* Style untuk link NavLink yang sedang aktif */
+header ul li a.active {
+    color: #004a99;
+    border-bottom: 3px solid #ffc107; /* Aksen kuning */
+}
+
+
+/* --- Hero (Judul Utama di home.jsx) --- */
+.hero-section {
+    background-color: #004a99; /* Latar biru tua */
+    color: white;
+    text-align: center;
+    padding: 80px 20px;
+    min-height: 450px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px; /* Tambahan agar bagus */
+}
+
+.hero-content {
+    max-width: 800px;
+}
+
+.hero-content h1 {
+    font-size: 2.2em;
+    line-height: 1.3;
+    margin-bottom: 20px;
+}
+
+.hero-content .subtitle {
+    font-size: 1.2em;
+    font-style: italic;
+    opacity: 0.9;
+    margin-bottom: 30px;
+}
+
+.cta-button {
+    background-color: #ffc107; /* Aksen kuning */
+    color: #333;
+    padding: 12px 25px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    display: inline-block;
+}
+
+.cta-button:hover {
+    background-color: #ffd966;
+    transform: scale(1.05);
+}
+
+/* --- Main Content Area (Layout) --- */
+main {
+    flex-grow: 1; /* Penting untuk sticky footer */
+    width: 100%;
+    padding: 40px 0; /* Beri jarak atas bawah */
+}
+
+/* Ini adalah 'container' untuk halaman (formulir.jsx & laporan.jsx) */
+.container-main {
+    width: 90%;
+    max-width: 1000px;
+    margin: 0 auto;
+    background-color: #ffffff;
+    padding: 30px 40px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+
+/* Judul Halaman di Formulir & Laporan */
+.container-main h2 {
+    font-size: 2em;
+    color: #004a99;
+    margin-bottom: 30px;
+    border-bottom: 3px solid #ffc107;
+    padding-bottom: 10px;
+    display: inline-block;
+}
+
+/* --- Footer (dari Web Arcomix) --- */
+footer {
+    background-color: #333;
+    color: #ccc;
+    text-align: center;
+    padding: 30px 20px;
+    margin-top: auto; /* Penting untuk sticky footer */
+}
+
+footer p {
+    margin-bottom: 5px;
+}
+
+
+/*
+=====================================================
+ STYLING UNTUK FITUR (FORMULIR, TABEL, TOMBOL)
+ Diambil dari project React kita sebelumnya
+=====================================================
+*/
+
+/* --- Formulir (formulir.jsx) --- */
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 8px;
+    color: #555;
+}
+
+.form-group input[type="text"],
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1em;
+    font-family: inherit;
+}
+
+.form-group textarea {
+    resize: vertical;
+}
+
+.btn-submit {
+    background-color: #0056b3; 
+    color: white;
+    padding: 15px 25px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn-submit:hover {
+    background-color: #004a99;
+}
+
+/* Pesan Sukses (JS) */
+.pesan-sukses {
+    margin-top: 20px;
+    padding: 15px;
+    background-color: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+    border-radius: 5px;
+}
+
+
+/* --- Tabel Rekapan (laporan.jsx) --- */
+.tabel-rekapan {
+    width: 100%;
+    margin-top: 20px;
+    border-collapse: collapse; /* Garis jadi satu */
+    font-size: 0.95em;
+    overflow-x: auto; /* Agar bisa di-scroll di HP */
+    display: block;
+}
+
+.tabel-rekapan th,
+.tabel-rekapan td {
+    border: 1px solid #ddd;
+    padding: 12px; /* Dibuat lebih lega */
+    text-align: left;
+    vertical-align: top;
+    min-width: 100px; /* Lebar minimum per kolom */
+}
+
+.tabel-rekapan th {
+    background-color: #f4f7f6;
+    font-weight: bold;
+    position: sticky; /* Header tabel 'nempel' saat scroll */
+    top: 0;
+}
+
+.tabel-rekapan tbody tr:nth-child(even) {
+    background-color: #f9f9f9; /* Zebra striping */
+}
+
+/* Styling untuk Tombol Aksi di Tabel */
+.kolom-aksi {
+    display: flex;
+    flex-wrap: wrap; /* Biar rapi di HP */
+    gap: 8px; /* Jarak antar tombol */
+    min-width: 130px; /* Lebar kolom aksi */
+}
+
+.btn-aksi {
+    padding: 5px 10px;
+    border: none;
+    border-radius: 4px;
+    color: white;
+    cursor: pointer;
+    font-size: 0.9em;
+    transition: opacity 0.3s ease;
+}
+.btn-aksi:hover {
+    opacity: 0.8;
+}
+
+.btn-selesai {
+    background-color: #28a745; /* Hijau */
+}
+
+.btn-delete {
+    background-color: #dc3545; /* Merah */
+}
+
+/* Styling untuk Label Status */
+.status-selesai {
+    color: #28a745; /* Hijau */
+    font-weight: bold;
+}
+
+.status-baru {
+    color: #fd7e14; /* Oranye */
+    font-weight: bold;
+}
